@@ -20,14 +20,16 @@
 | ViT   | 97.15%        |
 
 ---
-
-## Q2 — Text-Driven Image Segmentation with SAM 2
-- **Pipeline**:  
-  1. Load image  
-  2. Accept text prompt (e.g., `"a cat"`)  
-  3. Convert text → region seeds (using CLIPSeg / GroundingDINO)  
-  4. Feed seeds → SAM 2  
-  5. Display final segmentation mask overlay  
+  
+ # Q2 — Text-Driven Image Segmentation with SAM2
+This notebook performs text-prompted segmentation using CLIPSeg + SAM2.
+Pipeline:
+- Load an image
+- Input a text prompt
+- Generate region seeds via CLIPSeg
+- Segment object with SAM2
+- Display segmentation mask
+(Bonus: Video propagation demo included)
 
 - **Limitations**:
   - Accuracy depends on quality of text-to-seed model.  
@@ -37,11 +39,11 @@
 ---
 
 ## How to Run in Colab
-1. Open **q1.ipynb** in Google Colab.  
+- Open **q1.ipynb** in Google Colab.  
    - Runtime → Change runtime type → GPU  
    - Run all cells to train & evaluate the Vision Transformer on CIFAR-10.  
 
-2. Open **q2.ipynb** in Google Colab.  
+- Open **q2.ipynb** in Google Colab.  
    - Run all cells to install dependencies, load an image, enter a text prompt, and visualize segmentation.  
 
 ---
